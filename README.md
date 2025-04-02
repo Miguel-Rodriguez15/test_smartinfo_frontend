@@ -31,9 +31,10 @@ Estamos trabajando continuamente para mejorar la experiencia del jugador, agrega
 
 1. **Clonar el Repositorio**:
 
+2. **Correr el proyecto**:
+- ```pnpm run dev```
 
-
-2. **Abrir en el Navegador**:
+3. **Abrir en el Navegador**:
 - Accede a `http://localhost:5173` en tu navegador para jugar.
 
 
