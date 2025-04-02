@@ -1,0 +1,263 @@
+/* Estilos base */
+:root {
+  --maze-primary: #3a0ca3;
+  --maze-secondary: #4cc9f0;
+  --maze-dark: #1a1a2e;
+  --maze-danger: #f72585;
+  --maze-light: #f8f9fa;
+  --maze-success: #2ec4b6;
+}
+
+body {
+  background-color: var(--maze-dark);
+  font-family: 'Press Start 2P', cursive, sans-serif;
+  color: var(--maze-light);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Contenedor principal */
+.maze-login-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  overflow: hidden;
+  background-color: rgba(26, 26, 46, 0.8);
+  border: 4px solid var(--maze-primary);
+  box-shadow: 0 0 20px var(--maze-secondary), 
+              inset 0 0 10px var(--maze-primary);
+  border-radius: 10px;
+  padding: 2rem;
+}
+
+/* Cabecera */
+.maze-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.maze-header h1 {
+  color: var(--maze-secondary);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 5px var(--maze-primary);
+}
+
+.maze-header p {
+  font-size: 0.7rem;
+  color: var(--maze-light);
+  opacity: 0.8;
+}
+
+/* Formulario */
+.maze-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.maze-input-group {
+  position: relative;
+}
+
+.maze-input-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.7rem;
+  color: var(--maze-secondary);
+}
+
+.maze-input-group input {
+  width: 100%;
+  padding: 0.8rem;
+  background-color: rgba(58, 12, 163, 0.2);
+  border: 2px solid var(--maze-primary);
+  color: var(--maze-light);
+  font-family: inherit;
+  border-radius: 4px;
+  transition: all 0.3s;
+}
+
+.maze-input-group input:focus {
+  outline: none;
+  border-color: var(--maze-secondary);
+  box-shadow: 0 0 10px var(--maze-secondary);
+}
+
+.maze-input-decoration {
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--maze-primary), var(--maze-secondary), var(--maze-primary));
+  opacity: 0.5;
+}
+
+/* Botón */
+.maze-button {
+  position: relative;
+  background: linear-gradient(135deg, var(--maze-primary), var(--maze-secondary));
+  color: var(--maze-light);
+  border: none;
+  padding: 1rem;
+  font-family: inherit;
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-top: 1rem;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.maze-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(76, 201, 240, 0.4);
+}
+
+.maze-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.maze-button-corner {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: var(--maze-light);
+  transition: all 0.3s;
+}
+
+.maze-button-corner-tl {
+  top: 0;
+  left: 0;
+  border-top: 2px solid var(--maze-primary);
+  border-left: 2px solid var(--maze-primary);
+}
+
+.maze-button-corner-tr {
+  top: 0;
+  right: 0;
+  border-top: 2px solid var(--maze-primary);
+  border-right: 2px solid var(--maze-primary);
+}
+
+.maze-button-corner-bl {
+  bottom: 0;
+  left: 0;
+  border-bottom: 2px solid var(--maze-primary);
+  border-left: 2px solid var(--maze-primary);
+}
+
+.maze-button-corner-br {
+  bottom: 0;
+  right: 0;
+  border-bottom: 2px solid var(--maze-primary);
+  border-right: 2px solid var(--maze-primary);
+}
+
+.maze-button:hover .maze-button-corner {
+  width: 15px;
+  height: 15px;
+}
+
+/* Mensaje de error */
+.maze-error {
+  color: var(--maze-danger);
+  font-size: 0.7rem;
+  text-align: center;
+  margin-top: -1rem;
+  text-shadow: 0 0 3px rgba(247, 37, 133, 0.5);
+}
+
+/* Pie de página */
+.maze-footer {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.6rem;
+}
+
+.maze-footer a {
+  color: var(--maze-secondary);
+  text-decoration: none;
+}
+
+.maze-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Decoración del laberinto */
+.maze-decoration {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.maze-path {
+  position: absolute;
+  background-color: var(--maze-secondary);
+}
+
+.maze-path-1 {
+  top: 20%;
+  left: 10%;
+  width: 60%;
+  height: 2px;
+  transform: rotate(45deg);
+}
+
+.maze-path-2 {
+  top: 40%;
+  right: 15%;
+  width: 50%;
+  height: 2px;
+  transform: rotate(-20deg);
+}
+
+.maze-path-3 {
+  bottom: 30%;
+  left: 20%;
+  width: 70%;
+  height: 2px;
+  transform: rotate(15deg);
+}
+
+.maze-minotaur-icon {
+  position: absolute;
+  bottom: 10%;
+  right: 10%;
+  font-size: 2rem;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.3; transform: scale(1); }
+  50% { opacity: 0.6; transform: scale(1.1); }
+  100% { opacity: 0.3; transform: scale(1); }
+}
+
+/* Efecto de neón para el título */
+@keyframes neon {
+  from {
+    text-shadow: 0 0 5px var(--maze-light), 0 0 10px var(--maze-light), 
+                 0 0 15px var(--maze-secondary), 0 0 20px var(--maze-secondary);
+  }
+  to {
+    text-shadow: 0 0 10px var(--maze-light), 0 0 20px var(--maze-light), 
+                 0 0 30px var(--maze-secondary), 0 0 40px var(--maze-secondary);
+  }
+}
+
+.maze-header h1 {
+  animation: neon 1.5s ease-in-out infinite alternate;
+}
