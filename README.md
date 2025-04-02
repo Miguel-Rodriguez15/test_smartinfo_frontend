@@ -1,55 +1,41 @@
-# React + TypeScript + Vite
+# Laberinto del Minotauro
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Un juego de aventuras en un laberinto interactivo**
 
-Currently, two official plugins are available:
+## Descripción del Proyecto
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+El Laberinto del Minotauro es un juego desarrollado en React que te desafía a encontrar la salida de un laberinto mientras evitas obstáculos y superas desafíos. Este proyecto combina elementos de aventura y estrategia, ofreciendo una experiencia única y emocionante para los jugadores.
 
-## Expanding the ESLint configuration
+## Características del Juego
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Laberintos Dinámicos**: Cada partida genera un laberinto único, asegurando que la experiencia sea diferente cada vez que juegues.
+- **Movimientos Interactivos**: Controla al jugador con movimientos simples (arriba, abajo, izquierda, derecha) y observa cómo el laberinto se actualiza en tiempo real.
+- **Puntuación y Ranking**: Compete con otros jugadores para obtener la mejor puntuación y ver tu posición en el ranking.
+- **Registro y Inicio de Sesión**: Crea una cuenta para guardar tus progresos y comparar tus logros con otros jugadores.
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Estado del Proyecto
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+🚧 **En desarrollo activo** 🚧
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Estamos trabajando continuamente para mejorar la experiencia del jugador, agregar nuevas características y expandir el juego.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
-# test_smartinfo_frontend
+## Instrucciones para Ejecutar el Proyecto
+
+### Requisitos Previos
+
+- Node.js (versión 16 o superior)
+- pnpm
+- proporcionar en el archivo .env la URL de la API: ```VITE_API_URL=your_api_url```
+  
+### Pasos para Ejecutar
+
+1. **Clonar el Repositorio**:
+
+
+
+2. **Abrir en el Navegador**:
+- Accede a `http://localhost:5173` en tu navegador para jugar.
+
+
+
+¡Disfruta del Laberinto del Minotauro y buena suerte en tu aventura!
